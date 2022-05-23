@@ -1,0 +1,86 @@
+{#
+/**
+ * @file
+ * Theme override for displaying a view as a table.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ *   - class: HTML classes that can be used to style contextually through CSS.
+ * - title : The title of this group of rows.
+ * - header: The table header columns.
+ *   - attributes: Remaining HTML attributes for the element.
+ *   - content: HTML classes to apply to each header cell, indexed by
+ *   the header's key.
+ *   - default_classes: A flag indicating whether default classes should be
+ *     used.
+ * - caption_needed: Is the caption tag needed.
+ * - caption: The caption for this table.
+ * - accessibility_description: Extended description for the table details.
+ * - accessibility_summary: Summary for the table details.
+ * - rows: Table row items. Rows are keyed by row number.
+ *   - attributes: HTML classes to apply to each row.
+ *   - columns: Row column items. Columns are keyed by column number.
+ *     - attributes: HTML classes to apply to each column.
+ *     - content: The column content.
+ *   - default_classes: A flag indicating whether default classes should be
+ *     used.
+ * - responsive: A flag indicating whether table is responsive.
+ * - sticky: A flag indicating whether table header is sticky.
+ *
+ * @see template_preprocess_views_view_table()
+ */
+#}
+<div class="carousel-container">
+	<img src="/themes/custom/tmBlog/logo.svg" class="position-absolute d-lg-none banner-logo-mobile"/>
+	<div class="container-lg mx-auto">
+		<div class="mainbanner__bannertitle">
+			<h2 class="text-white mainbanner__txttile position-relative">
+				{# <span>Keep up with the</span> #}
+				Explore
+				<div class="dropdown mainbnrslider-nav-cover">
+					<button class="dropbtn mainbnrslider-nav p-0">
+						{% for row in rows %}
+							<div data-index="{{loop.index}}">{{row.columns.name|render|striptags|trim|lower}}</div>
+						{% endfor %}
+					</button>
+					<div id="myDropdown" class="dropdown-content d-none">
+						{% for row in rows %}
+							<div class="selection" id="bannerfilter-{{row.columns.name_1|render|striptags|trim|lower}}" data-index="{{loop.index}}">{{row.columns.name}}</div>
+						{% endfor %}
+					</div>
+				</div>
+			</h2>
+			<div class="row">
+				<div class="col-12">
+					{# <div class="mainbnrslider-for container my-3 px-0">
+						{% for row in rows %}
+							<div>
+								<div class="font18-16mob text-white px-0 col-9 col-md-12">{{row.columns.description__value}}</div>
+							</div>
+						{% endfor %}
+					</div> #}
+					<div class="mainbnrslider-for mainbnrslider-fade my-4">
+						{% for row in rows %}
+							<div>
+								<a href="/{{row.columns.name_1.content|render|striptags|trim|lower}}" class="link-cta-secondary">Know more
+									<img src="/themes/custom/tmBlog/img/icon/icon-orange-arrow.svg" alt="Know more"></a>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mainbanner__bannerimg mainbnrslider-for mainbnrslider-fade">
+		{% for row in rows %}
+			<div>
+				<picture>
+					<source srcset="{{row.columns.field_media_image_1|render|striptags|trim}}" media="(max-width: 480px)">
+					<source srcset="{{row.columns.field_media_image_2|render|striptags|trim}}" media="(max-width: 999px)">
+					<source srcset="{{row.columns.field_media_image|render|striptags|trim}}" media="(min-width: 1000px)">
+					<img src="{{row.columns.field_media_image|render|striptags|trim}}" alt="insights banner image" class="w-100"/>
+				</picture>
+			</div>
+		{% endfor %}
+	</div>
+</div>

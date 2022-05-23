@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26.49" height="26.49" viewBox="0 0 26.49 26.49">
+  <defs>
+    <clipPath id="clip-icon-facebook-black">
+      <rect width="26.49" height="26.49"/>
+    </clipPath>
+  </defs>
+  <g id="icon-facebook-black" clip-path="url(#clip-icon-facebook-black)">
+    <path id="icon-facebook-black-2" data-name="icon-facebook-black" d="M11.176,26.331a13.246,13.246,0,1,1,4.139,0V17.075H18.4l.587-3.829H15.316V10.761a1.914,1.914,0,0,1,2.159-2.069h1.67V5.433a20.371,20.371,0,0,0-2.965-.259c-3.026,0-5,1.834-5,5.153v2.918H7.813v3.829h3.363Zm3.3.105h0Zm-2.459,0h0Zm.039,0h0Zm2.378,0h0Zm-.042,0h0Zm-2.292,0h0Zm2.25,0h0Zm-2.209,0h0Zm.037,0h0Zm2.13,0h0Zm-.042,0h0Zm-2.049,0h0Zm2.007,0h0Zm-1.957,0h0Zm1.915,0h0Zm-1.878,0h0Zm.037,0h0Zm1.8,0h0Zm-.042,0h0Zm-1.7,0h0Zm1.66,0h0Zm-1.624,0h0Zm.037,0h0Zm1.544,0h0Zm-1.487,0h0Zm1.445,0h0Zm-.042,0h0Zm-1.368,0h0Zm1.326,0h0Zm-1.288,0h0Zm1.246,0h0Zm-1.208,0h0Zm1.166,0h0Zm-1.112,0h0Zm1.07,0h0Zm-1.032,0h0Zm.039,0h0Zm.951,0h0Zm-.043,0h0Zm-.854,0h0Zm.037,0h0Zm.774,0h0Zm-.043,0h0Zm-.693,0h0Zm.65,0h0Zm-.608,0h0Zm.049,0h0Zm.517,0h0Zm-.478,0h0Zm.435,0h0Zm-.394,0h0Zm.351,0h0Zm-.043,0h0Zm-.258,0h0Zm.216,0h0Zm-.177,0h0Zm.134,0h0Zm-.093,0h0Z" transform="translate(-0.002)" fill="#2f2f2f" fill-rule="evenodd"/>
+  </g>
+</svg>

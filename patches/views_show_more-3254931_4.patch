@@ -1,0 +1,27 @@
+diff --git a/js/views_show_more.js b/js/views_show_more.js
+index eff0b7f0f..c09e29c61 100644
+--- a/js/views_show_more.js
++++ b/js/views_show_more.js
+@@ -21,8 +21,8 @@
+     var view = Drupal.views.instances[currentViewId];
+ 
+     Drupal.detachBehaviors($wrapper.get(0), settings);
+-    view.$view.removeOnce('ajax-pager');
+-    view.$exposed_form.removeOnce('exposed-form');
++    once.remove('ajax-pager', view.$view);
++    once.remove('exposed-form', view.$exposed_form);
+ 
+     // Set up our default query options. This is for advance users that might
+     // change there views layout classes. This allows them to write there own
+diff --git a/views_show_more.libraries.yml b/views_show_more.libraries.yml
+index 8b3a31d45..7df4832e5 100644
+--- a/views_show_more.libraries.yml
++++ b/views_show_more.libraries.yml
+@@ -4,6 +4,6 @@ views_show_more:
+     js/views_show_more.js: {}
+   dependencies:
+     - core/jquery
+-    - core/jquery.once
++    - core/once
+     - core/drupal
+     - core/drupal.ajax

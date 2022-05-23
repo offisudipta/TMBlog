@@ -1,0 +1,19 @@
+name: TMBlog Theme
+type: theme
+description: 'Theme with Bootstrap 4 css library'
+core_version_requirement: ^8.8 || ^9
+base theme: classy
+
+libraries:
+  - tmBlog/global-styling
+libraries-override:
+  core/normalize: false
+
+regions:
+  header: Header
+  nav_main: 'Main navigation region'
+  banner_area: Banner
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  footer: Footer
+  search: Search

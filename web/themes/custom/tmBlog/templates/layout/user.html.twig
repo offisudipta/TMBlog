@@ -1,0 +1,91 @@
+{#
+/**
+ * @file
+ * Theme override to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+{% set facebook = content.field_facebook_username|render|striptags|trim %}
+{% set twitter = content.field_twitter_username|render|striptags|trim %}
+{% set linkedin = content.field_linkedin_username|render|striptags|trim %}
+<article{{attributes.addClass('profile','w-100')}}>
+	<section class="bg-blue innerbanner innertopheader headertinybtm author-bnr">
+		<div class="container">
+			<div class="row textcover pb-0">
+				<div class="col-12 col-sm-6 my-md-4 py-md-1">
+					<h1 class="text-orangeff6 user-name">{{content.field_first_name|render|striptags|trim}}
+						{{content.field_last_name|render|striptags|trim}}</h1>
+					<blockquote class="authorquote">
+						<h5 class="authorquote--quote text-white">{{content.field_description}}</h5>
+					</blockquote>
+					<div class="gapspacing-top-xsmall">
+						<p class="font14 text-white">
+							<span class="mr-1">
+								<strong>Topics covered</strong>
+							</span>
+							{% for key,item in content.field_topics_covered %}
+								{% if key matches "/^\\d+$/" %}
+									<span class="topic-tag">{{item['#title']}}</span>
+								{% endif %}
+							{% endfor %}
+						</p>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 d-md-flex mt-auto">
+					<img src="{{file_url(user.user_picture.0.entity.uri.value)}}" alt="Author Banner" class="w-100 mt-4 mt-md-2 pr-2rem">
+					<div class="author-transform-txt">
+						<h4 class="designation">{{content.field_designation}}</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bg-orangeff6">
+		{% if (content.field_facebook_username['#items'] is empty) and (content.field_twitter_username['#items'] is empty) and (content.field_linkedin_username['#items'] is empty) %}
+			{% else %}
+				<div class="know-more-author">
+					<div class="container">
+						<div class="row">
+							<div class="col text-white font14 d-flex align-middle">
+								<div class="d-flex align-items-center">
+									<span class="pr-10px">
+										<strong class="d-flex">Know more
+											<span class="d-none d-md-flex px-1">about
+												{{content.field_first_name}}
+												{{content.field_last_name}}</span>
+										</strong>
+									</span>
+									{% if content.field_facebook_username['#items'] is not empty %}
+										<a href="https://www.facebook.com/{{facebook}}" target="_blank">
+											<img src="/themes/custom/tmBlog/img/icon/icon-facebook.svg" alt="{{content.field_first_name|render|striptags|trim}} {{content.field_last_name|render|striptags|trim}}'s Facebook" class="pl-md-13px">
+										</a>
+									{% endif %}
+									{% if content.field_twitter_username['#items'] is not empty %}
+										<a href="https://www.twitter.com/{{twitter}}" target="_blank">
+											<img src="/themes/custom/tmBlog/img/icon/icon-twitter.svg" alt="{{content.field_first_name|render|striptags|trim}} {{content.field_last_name|render|striptags|trim}}'s Twitter" class="pl-13px">
+										</a>
+									{% endif %}
+									{% if content.field_linkedin_username['#items'] is not empty %}
+										<a href="https://www.linkedin.com/in/{{linkedin}}" target="_blank">
+											<img src="/themes/custom/tmBlog/img/icon/icon-linkedin.svg" alt="{{content.field_first_name|render|striptags|trim}} {{content.field_last_name|render|striptags|trim}}'s LinkedIn" class="pl-13px">
+										</a>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		{% endif %}
+	</section>
+</article>

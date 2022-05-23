@@ -1,0 +1,96 @@
+<?php
+
+/**
+ * @file
+ * TmBlog theme file.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\user\Entity\User;
+
+/**
+ *
+ */
+function tmBlog_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form_ids = [
+    'views-exposed-form-article-listing-block-1',
+    'views-exposed-form-article-listing-block-2',
+    'views-exposed-form-article-listing-page-1',
+    'views-exposed-form-article-listing-page-2',
+    'views-exposed-form-article-listing-page-3',
+    'views-exposed-form-article-listing-page-4',
+    'views-exposed-form-flag-bookmark-page-1',
+  ];
+  if ($form_id == 'views_exposed_form' && in_array($form['#id'], $form_ids)) {
+    $form['changed_wrapper']['#attributes'] = ['class' => ['hidden']];
+    $form['custom_daterange'] = [
+      '#type' => 'textfield',
+      '#attributes' => [
+        'class' => ['custom_daterange'],
+        'placeholder' => 'Sort by date',
+        'size' => 20,
+      ],
+    ];
+    foreach ($form as $key => $value) {
+      if (isset($value['#type']) && $value['#type'] == 'select') {
+        if (isset($form['#info']) && isset($form['#info']['filter-' . $key])) {
+          $all_option = $form['#info']['filter-' . $key]['label'];
+          $form[$key]['#attributes']['title'] = $all_option;
+          unset($form['#info']['filter-' . $key]);
+          unset($form[$key]['#title']);
+        }
+      }
+    }
+  }
+  $view_names = ['views-exposed-form-article-listing-block-2'];
+  $view = $form_state->get('view');
+  if ($form_id == 'views_exposed_form' && in_array($form['#id'], $view_names)) {
+    $current_path = \Drupal::service('path.current')->getPath();
+    $current_path = explode('/', $current_path);
+    $user = User::load(end($current_path));
+    $user = $user->toArray();
+    $form['author_name'] = [
+      '#type' => 'hidden',
+      '#value' => $user['field_first_name'][0]['value'] . ' ' . $user['field_last_name'][0]['value'],
+    ];
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_table().
+ */
+function tmBlog_preprocess_views_view_table(&$variables) {
+  $view = $variables['view'];
+  $id = $view->id();
+  $entityManager = \Drupal::entityTypeManager();
+  if ($id == 'article_listing' && $view->current_display == 'block_1') {
+    $rows = $variables['rows'];
+    foreach ($rows as $key => $value) {
+      $nid = trim(strip_tags($value['columns']['nid']['content'][0]['field_output']['#markup']));
+      $entity = $entityManager->getStorage('node')->load($nid);
+      $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
+      if ($key == 0 && $entity->field_featured->value == 1) {
+        $pre_render = $view_builder->view($entity, 'featured');
+      }
+      else {
+        $pre_render = $view_builder->view($entity, 'teaser');
+      }
+      unset($rows[$key]['columns']);
+      $rows[$key] = ['#type' => 'markup', '#markup' => render($pre_render)];
+    }
+    $variables['rows'] = $rows;
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_table().
+ */
+// Function tmBlog_preprocess_views_view(&$variables) {
+//   $view = $variables['view'];
+//   if ($view->id == 'article_listing' && $view->current_display = ) {
+//     $rows = $variables['rows'];
+//     // dsm(array_keys($view->toArray()));
+//     dsm($view->result);
+//     dsm($rows);
+//   }
+// }

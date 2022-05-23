@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="checkmark-checked" transform="translate(-15772 -5438)">
+    <rect id="Rectangle_28394" data-name="Rectangle 28394" width="24" height="24" rx="5" transform="translate(15772 5438)" fill="#223d92"/>
+    <g id="checkmark-group" transform="translate(15776.252 5372.636)">
+      <g id="white-checkmark" transform="translate(-0.001 71.788)">
+        <path id="white-checkmark-path" d="M15.138,72.148a1.229,1.229,0,0,0-1.738,0L5.576,79.973,2.1,76.5A1.229,1.229,0,0,0,.36,78.234L4.706,82.58a1.229,1.229,0,0,0,1.739,0l8.693-8.693A1.229,1.229,0,0,0,15.138,72.148Z" transform="translate(0.001 -71.788)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

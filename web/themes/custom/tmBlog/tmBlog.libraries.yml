@@ -1,0 +1,18 @@
+global-styling:
+  css:
+    theme:
+      css/bootstrap.min.css: {}
+      css/bootstrap-select-min.css: {}
+      js/slick/slick/slick.css: {}
+      css/main.css: {}
+      css/daterangepicker.min.css: {}
+      css/style.css: {}
+  js:
+    js/moment.min.js: {}
+    js/daterangepicker.min.js: {}
+    js/bootstrap.bundle.min.js: {}
+    js/slick/slick/slick.min.js: {}
+    js/bootstrap-select-min.js: {}
+    js/affix.js: {}
+    js/main.js: {}
+    js/custom.js: {}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_27886" data-name="Rectangle 27886" width="17.648" height="19.849" fill="#ee4d14"/>
+    </clipPath>
+  </defs>
+  <g id="icon-notification-bell" transform="translate(-0.171 -0.171)">
+    <g id="Group_80199" data-name="Group 80199" transform="translate(0 0)">
+      <circle id="Ellipse_254" data-name="Ellipse 254" cx="15" cy="15" r="15" transform="translate(0.171 0.171)" fill="#fff"/>
+    </g>
+    <g id="Group_80542" data-name="Group 80542" transform="translate(6.034 5.329)">
+      <g id="Group_80541" data-name="Group 80541" clip-path="url(#clip-path)">
+        <path id="Path_57234" data-name="Path 57234" d="M1.875,15.438H15.77A14.83,14.83,0,0,1,14.7,9.947v-2.6a5.881,5.881,0,0,0-11.762,0v2.6a14.826,14.826,0,0,1-1.064,5.491m15.032,1.47H.734a.734.734,0,0,1-.655-1.064,13.333,13.333,0,0,0,1.39-5.881V7.351a7.351,7.351,0,0,1,14.7,0v2.6a13.333,13.333,0,0,0,1.39,5.881.737.737,0,0,1-.655,1.08" transform="translate(0)" fill="#ee4d14"/>
+        <path id="Path_57235" data-name="Path 57235" d="M8.925,20.161a3.677,3.677,0,0,1-3.676-3.676.735.735,0,0,1,1.47,0,2.2,2.2,0,0,0,.647,1.558,2.26,2.26,0,0,0,3.117,0,.739.739,0,0,1,1.045,1.045,3.67,3.67,0,0,1-2.6,1.072" transform="translate(-0.104 -0.312)" fill="#ee4d14"/>
+      </g>
+    </g>
+  </g>
+</svg>
