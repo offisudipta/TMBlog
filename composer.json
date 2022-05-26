@@ -42,6 +42,7 @@
         "drupal/shariff": "1.7",
         "drupal/simple_menu_icons": "^2.3",
         "drupal/simple_popup_blocks": "2.8",
+        "drupal/usage_data": "^1.0",
         "drupal/views_show_more": "^1.0",
         "drupal/webform": "^6.1",
         "drush/drush": "^10",
