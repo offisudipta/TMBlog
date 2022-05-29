@@ -775,6 +775,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # }
 
 $settings['config_sync_directory'] = '../../config';
+$settings['file_private_path'] = 'sites/default/files/private';
 $databases['default']['default'] = array (
   'database' => 'tmblog',
   'username' => 'root',
