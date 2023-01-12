@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200.006" height="300" viewBox="0 0 200.006 300">
+  <g id="element-homepage" transform="translate(0.001)">
+    <g id="Group_83944" data-name="Group 83944" transform="translate(100.002 100)">
+      <path id="Path_59493" data-name="Path 59493" d="M0,0V50L50,0Z" transform="translate(0 0)" fill="#fb5e00"/>
+      <path id="Path_59494" data-name="Path 59494" d="M0,100H50l50-50V0h0Z" transform="translate(0 0)" fill="#fb5e00"/>
+      <path id="Path_59495" data-name="Path 59495" d="M90.88,140.881h50v-50Z" transform="translate(-40.88 -40.881)" fill="#1800e1"/>
+      <path id="Path_59496" data-name="Path 59496" d="M50,0,0,50v50L100,0Z" transform="translate(0 0)" fill="#1800e1"/>
+    </g>
+    <g id="Group_83945" data-name="Group 83945" transform="translate(100.002 200)">
+      <path id="Path_59495-2" data-name="Path 59495" d="M90.88,90.88h50v50Z" transform="translate(-40.88 -90.88)" fill="#fb5e00"/>
+      <path id="Path_59496-2" data-name="Path 59496" d="M50,100,0,50V0L100,100Z" transform="translate(0 0.001)" fill="#fb5e00"/>
+    </g>
+    <g id="Group_84191" data-name="Group 84191" transform="translate(-0.001 200)">
+      <path id="Path_59495-3" data-name="Path 59495" d="M90.88,90.88h50v50Z" transform="translate(-40.88 -90.88)" fill="#fb5e00"/>
+      <path id="Path_59496-3" data-name="Path 59496" d="M50,100,0,50V0L100,100Z" transform="translate(0 0.001)" fill="#fb5e00"/>
+    </g>
+    <g id="Group_84192" data-name="Group 84192" transform="translate(50 100)">
+      <path id="Path_59495-4" data-name="Path 59495" d="M115.881,90.88h-25v25Z" transform="translate(-90.881 -90.88)" fill="#fb5e00"/>
+      <path id="Path_59496-4" data-name="Path 59496" d="M25,50,50,25V0L0,50Z" transform="translate(0 0.001)" fill="#fb5e00"/>
+    </g>
+    <g id="Group_84193" data-name="Group 84193" transform="translate(50 150)">
+      <path id="Path_59495-5" data-name="Path 59495" d="M115.881,90.88h-25v25Z" transform="translate(-90.881 -90.88)" fill="#1800e1"/>
+      <path id="Path_59496-5" data-name="Path 59496" d="M25,50,50,25V0L0,50Z" transform="translate(0 0.001)" fill="#1800e1"/>
+    </g>
+    <g id="Group_83946" data-name="Group 83946" transform="translate(100.002 0)">
+      <path id="Path_59495-6" data-name="Path 59495" d="M90.88,140.881h50v-50Z" transform="translate(-40.88 -40.881)" fill="#1800e1"/>
+      <path id="Path_59496-6" data-name="Path 59496" d="M50,0,0,50v50L100,0Z" transform="translate(0 0)" fill="#1800e1"/>
+    </g>
+  </g>
+</svg>

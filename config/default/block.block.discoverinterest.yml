@@ -1,0 +1,25 @@
+uuid: 8acb309e-fff6-420f-8775-56492519ef7b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:767feba2-0003-496c-83e2-5068ef2d5ae1'
+  module:
+    - block_content
+  theme:
+    - tmBlog
+id: discoverinterest
+theme: tmBlog
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:767feba2-0003-496c-83e2-5068ef2d5ae1'
+settings:
+  id: 'block_content:767feba2-0003-496c-83e2-5068ef2d5ae1'
+  label: 'Discover Interest'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

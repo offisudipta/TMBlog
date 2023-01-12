@@ -1,0 +1,22 @@
+uuid: f75b8d12-d855-4dc9-8c02-7ec65fc6a010
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - tmBlog
+_core:
+  default_config_hash: '-laWx8WA-ikiIEH3NJQ0hVbjqk3iEuBms91LB0B4IQU'
+id: tmBlog_help
+theme: tmBlog
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

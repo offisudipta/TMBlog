@@ -1,0 +1,25 @@
+uuid: cf5bfae1-d198-4e43-b80b-0884da34a1db
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:custom_form_block:346b3104-9a38-4178-ac4d-0b67362d9096'
+  module:
+    - block_content
+  theme:
+    - tmBlog
+id: newsletter
+theme: tmBlog
+region: content
+weight: 2
+provider: null
+plugin: 'block_content:346b3104-9a38-4178-ac4d-0b67362d9096'
+settings:
+  id: 'block_content:346b3104-9a38-4178-ac4d-0b67362d9096'
+  label: Newsletter
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

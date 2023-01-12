@@ -1,0 +1,25 @@
+uuid: 29fe2cf9-f111-4bee-aeaf-eda3eafe9d66
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7ab4fd3b-ee31-4295-a1a3-844f1b5b9a52'
+  module:
+    - block_content
+  theme:
+    - tmBlog
+id: newsletterhtmlblock
+theme: tmBlog
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:7ab4fd3b-ee31-4295-a1a3-844f1b5b9a52'
+settings:
+  id: 'block_content:7ab4fd3b-ee31-4295-a1a3-844f1b5b9a52'
+  label: 'Newsletter html Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

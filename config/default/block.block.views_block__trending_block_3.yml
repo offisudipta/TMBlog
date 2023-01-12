@@ -1,0 +1,32 @@
+uuid: 0cefbe50-f883-4b71-aeb2-3a9d502b8779
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.trending
+  module:
+    - node
+    - views
+  theme:
+    - tmBlog
+id: views_block__trending_block_3
+theme: tmBlog
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:trending-block_3'
+settings:
+  id: 'views_block:trending-block_3'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article

@@ -1,0 +1,14 @@
+uuid: 60d1f068-7a70-450c-a2db-aee04a265cef
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user_pattern
+label: 'User pattern'
+type: 'canonical_entities:user'
+pattern: '/user/[user:field_first_name]_[user:field_last_name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,22 @@
+uuid: d5956f87-b90e-4053-8bca-7b8ce4e27127
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_form_block
+    - field.field.block_content.custom_form_block.field_form_entity
+id: block_content.custom_form_block.default
+targetEntityType: block_content
+bundle: custom_form_block
+mode: default
+content:
+  field_form_entity:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

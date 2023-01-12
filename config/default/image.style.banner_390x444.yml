@@ -1,0 +1,15 @@
+uuid: e8cb473e-c4f1-4d8d-8ffb-4e9f398d853b
+langcode: en
+status: true
+dependencies: {  }
+name: banner_390x444
+label: 'Banner 390x444'
+effects:
+  64c198a6-9ac2-4ec9-99b1-297945e86876:
+    uuid: 64c198a6-9ac2-4ec9-99b1-297945e86876
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 390
+      height: 444
+      anchor: center-center

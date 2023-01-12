@@ -1,0 +1,15 @@
+uuid: a0dfa8d1-6bb8-4311-bdee-9e02922bcc1b
+langcode: en
+status: true
+dependencies: {  }
+name: banner_314_x_187
+label: 'Banner 314 x 187'
+effects:
+  b2389b74-1ac3-49e2-a3bf-295c966eac8b:
+    uuid: b2389b74-1ac3-49e2-a3bf-295c966eac8b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 314
+      height: 187
+      anchor: center-center

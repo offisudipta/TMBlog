@@ -1,0 +1,25 @@
+uuid: 45cbe38a-05d4-49c4-afde-c648cbef3ea6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:custom_form_block:400d3bb4-7d93-4765-96b6-0d4e9eafa8f2'
+  module:
+    - block_content
+  theme:
+    - tmBlog
+id: feedback
+theme: tmBlog
+region: content
+weight: 1
+provider: null
+plugin: 'block_content:400d3bb4-7d93-4765-96b6-0d4e9eafa8f2'
+settings:
+  id: 'block_content:400d3bb4-7d93-4765-96b6-0d4e9eafa8f2'
+  label: Feedback
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

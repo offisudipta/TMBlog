@@ -25,9 +25,15 @@ function tmBlog_form_alter(&$form, FormStateInterface $form_state, $form_id) {
     $form['changed_wrapper']['#attributes'] = ['class' => ['hidden']];
     $form['custom_daterange'] = [
       '#type' => 'textfield',
+      '#title' => 'Date',
       '#attributes' => [
-        'class' => ['custom_daterange'],
-        'placeholder' => 'Sort by date',
+        'class' => [
+          'custom_daterange',
+          'date-range',
+          'form-control',
+          'position-relative',
+          'd-flex',
+        ],
         'size' => 20,
       ],
     ];
@@ -37,13 +43,12 @@ function tmBlog_form_alter(&$form, FormStateInterface $form_state, $form_id) {
           $all_option = $form['#info']['filter-' . $key]['label'];
           $form[$key]['#attributes']['title'] = $all_option;
           unset($form['#info']['filter-' . $key]);
-          unset($form[$key]['#title']);
+          $form[$key]['#title_display'] = 'after';
         }
       }
     }
   }
   $view_names = ['views-exposed-form-article-listing-block-2'];
-  $view = $form_state->get('view');
   if ($form_id == 'views_exposed_form' && in_array($form['#id'], $view_names)) {
     $current_path = \Drupal::service('path.current')->getPath();
     $current_path = explode('/', $current_path);
@@ -53,6 +58,41 @@ function tmBlog_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       '#type' => 'hidden',
       '#value' => $user['field_first_name'][0]['value'] . ' ' . $user['field_last_name'][0]['value'],
     ];
+  }
+  $form_ids = [
+    'views-exposed-form-article-listing-block-1',
+    'views-exposed-form-article-listing-block-2',
+  ];
+  if ($form_id == 'views_exposed_form' && in_array($form['#id'], $form_ids)) {
+    if (isset($form['field_category_target_id_1'])) {
+      $form['field_category_target_id_1']['#prefix'] = '<div class="col-12 col-lg-5 col-xl-4 pl-0 position-relative onetwo">';
+      $form['field_category_target_id_1']['#suffix'] = '</div>';
+    }
+    elseif (isset($form['field_category_target_id'])) {
+      $form['field_category_target_id']['#prefix'] = '<div class="col-12 col-lg-5 col-xl-4 pl-0 position-relative onetwo">';
+      $form['field_category_target_id']['#suffix'] = '</div>';
+    }
+    $form['custom_daterange']['#prefix'] = '<div class="col-12 col-lg-5 col-xl-4 mt-lg-0 mt-2 pl-0 pl-lg-2 ml-lg-2">';
+    $form['custom_daterange']['#suffix'] = '</div>';
+  }
+  $form_ids = [
+    'views-exposed-form-article-listing-page-1',
+    'views-exposed-form-article-listing-page-2',
+    'views-exposed-form-article-listing-page-3',
+    'views-exposed-form-article-listing-page-4',
+    'views-exposed-form-flag-bookmark-page-1',
+  ];
+  if ($form_id == 'views_exposed_form' && in_array($form['#id'], $form_ids)) {
+    $form['custom_daterange']['#prefix'] = '<div class="col-12 col-lg-5 col-xl-4 mt-2 mt-lg-0 px-0">';
+    $form['custom_daterange']['#suffix'] = '</div>';
+    if (isset($form['field_category_target_id_1'])) {
+      $form['field_category_target_id_1']['#prefix'] = '<div class="col-12 col-lg-5 col-xl-4 pl-0 position-relative onetwo">';
+      $form['field_category_target_id_1']['#suffix'] = '</div>';
+    }
+    elseif (isset($form['field_category_target_id'])) {
+      $form['field_category_target_id']['#prefix'] = '<div class="col-12 col-lg-5 col-xl-4 pl-0 position-relative onetwo">';
+      $form['field_category_target_id']['#suffix'] = '</div>';
+    }
   }
 }
 
@@ -81,16 +121,3 @@ function tmBlog_preprocess_views_view_table(&$variables) {
     $variables['rows'] = $rows;
   }
 }
-
-/**
- * Implements hook_preprocess_views_view_table().
- */
-// Function tmBlog_preprocess_views_view(&$variables) {
-//   $view = $variables['view'];
-//   if ($view->id == 'article_listing' && $view->current_display = ) {
-//     $rows = $variables['rows'];
-//     // dsm(array_keys($view->toArray()));
-//     dsm($view->result);
-//     dsm($rows);
-//   }
-// }

@@ -1,0 +1,22 @@
+uuid: e201019e-b805-48b8-ae66-bd67d359c32c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tmBlog
+_core:
+  default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
+id: tmBlog_messages
+theme: tmBlog
+region: content
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

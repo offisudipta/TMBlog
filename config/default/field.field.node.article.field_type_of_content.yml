@@ -1,0 +1,23 @@
+uuid: 6fcf6a6c-ce8d-4eef-bfe2-3b6ba4da3542
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_of_content
+    - node.type.article
+  module:
+    - options
+id: node.article.field_type_of_content
+field_name: field_type_of_content
+entity_type: node
+bundle: article
+label: 'Type of Content'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: article
+default_value_callback: ''
+settings: {  }
+field_type: list_string

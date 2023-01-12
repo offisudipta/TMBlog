@@ -1,0 +1,30 @@
+uuid: ce490f0b-326b-404d-a123-6aea2563a606
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:baa6cacf-65d0-48aa-95a9-503eb6f6e9ec'
+  module:
+    - block_content
+    - system
+  theme:
+    - tmBlog
+id: ideashero
+theme: tmBlog
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:baa6cacf-65d0-48aa-95a9-503eb6f6e9ec'
+settings:
+  id: 'block_content:baa6cacf-65d0-48aa-95a9-503eb6f6e9ec'
+  label: 'Ideas Hero'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /ideas

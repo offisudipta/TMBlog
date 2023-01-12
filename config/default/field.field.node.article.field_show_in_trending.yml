@@ -1,0 +1,23 @@
+uuid: 80b55652-ce0e-405f-9879-53c3a7ece920
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_in_trending
+    - node.type.article
+id: node.article.field_show_in_trending
+field_name: field_show_in_trending
+entity_type: node
+bundle: article
+label: 'Show in Trending'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

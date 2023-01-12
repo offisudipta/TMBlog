@@ -1,0 +1,30 @@
+uuid: 48a806f4-bd24-40f3-a803-904a41e5785f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1a6bd95e-8e99-4315-95aa-7a12c347f1c6'
+  module:
+    - block_content
+    - system
+  theme:
+    - tmBlog
+id: bookmarkbanner
+theme: tmBlog
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:1a6bd95e-8e99-4315-95aa-7a12c347f1c6'
+settings:
+  id: 'block_content:1a6bd95e-8e99-4315-95aa-7a12c347f1c6'
+  label: 'Bookmark Banner'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /bookmarks

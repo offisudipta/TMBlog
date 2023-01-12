@@ -1,0 +1,15 @@
+uuid: e772b929-584e-4af8-a22e-3ac9dfd3adb7
+langcode: en
+status: true
+dependencies: {  }
+name: thumbnail_300x180
+label: 'Thumbnail 300x180'
+effects:
+  787ec2fc-e97a-4b5e-9cbe-cc865493cb69:
+    uuid: 787ec2fc-e97a-4b5e-9cbe-cc865493cb69
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 180
+      anchor: center-center

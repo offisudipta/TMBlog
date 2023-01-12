@@ -1,0 +1,18 @@
+uuid: e791c0d2-ee38-45f7-a20c-8d0f079c5b7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_show_in_trending
+field_name: field_show_in_trending
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

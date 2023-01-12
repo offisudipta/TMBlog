@@ -1,0 +1,25 @@
+uuid: a222c425-30e1-437d-9d88-9c1ca284bbeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_download_count
+    - media.type.document
+id: media.document.field_download_count
+field_name: field_download_count
+entity_type: media
+bundle: document
+label: 'Download Count'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

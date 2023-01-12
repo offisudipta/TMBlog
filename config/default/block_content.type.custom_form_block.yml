@@ -1,0 +1,8 @@
+uuid: 2167715c-5030-4121-9828-a838d229374d
+langcode: en
+status: true
+dependencies: {  }
+id: custom_form_block
+label: 'Custom Form Block'
+revision: 0
+description: ''

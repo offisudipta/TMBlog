@@ -1,0 +1,27 @@
+uuid: 7827f6e8-a350-4c1c-981a-a599a6382d2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_form_block
+    - field.field.block_content.custom_form_block.field_form_entity
+id: block_content.custom_form_block.default
+targetEntityType: block_content
+bundle: custom_form_block
+mode: default
+content:
+  field_form_entity:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

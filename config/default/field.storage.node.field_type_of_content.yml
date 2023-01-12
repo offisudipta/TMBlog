@@ -1,0 +1,33 @@
+uuid: bd413b5e-6ca1-4772-9b66-c508164e92d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type_of_content
+field_name: field_type_of_content
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: article
+      label: Article
+    -
+      value: video
+      label: Video
+    -
+      value: podcast
+      label: Podcast
+    -
+      value: infographic
+      label: Infographic
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

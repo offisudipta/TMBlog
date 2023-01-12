@@ -1,0 +1,30 @@
+uuid: 15a7666f-3dfd-468b-bdc6-636a86c5fe94
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:41de5f8d-f1fc-4d28-84b9-004189512eb1'
+  module:
+    - block_content
+    - system
+  theme:
+    - tmBlog
+id: insightshero
+theme: tmBlog
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:41de5f8d-f1fc-4d28-84b9-004189512eb1'
+settings:
+  id: 'block_content:41de5f8d-f1fc-4d28-84b9-004189512eb1'
+  label: 'Insights Hero'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /insights

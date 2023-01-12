@@ -1,0 +1,24 @@
+uuid: dbc1c951-ed1b-4d05-9dfc-2be14ffe871d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.homepage_carousel
+  module:
+    - views
+  theme:
+    - tmBlog
+id: views_block__homepage_carousel_block_1
+theme: tmBlog
+region: banner_area
+weight: 0
+provider: null
+plugin: 'views_block:homepage_carousel-block_1'
+settings:
+  id: 'views_block:homepage_carousel-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

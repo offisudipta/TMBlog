@@ -1,6 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <g id="checkmark-unchecked" fill="#fff" stroke="#707070" stroke-width="0.5">
-    <rect width="24" height="24" rx="5" stroke="none"/>
-    <rect x="0.25" y="0.25" width="23.5" height="23.5" rx="4.75" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="checkmark-unchecked" transform="translate(-902 -199)">
+    <g id="Group_84474" data-name="Group 84474" transform="translate(902.133 199)">
+      <g id="Rectangle_29541" data-name="Rectangle 29541" transform="translate(-0.133)" fill="#fff" stroke="#b4b4b4" stroke-width="1">
+        <rect width="30" height="30" stroke="none"/>
+        <rect x="0.5" y="0.5" width="29" height="29" fill="none"/>
+      </g>
+    </g>
   </g>
 </svg>

@@ -1,0 +1,30 @@
+uuid: 0175d616-906b-4cce-8844-3f6523ead9aa
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7fe39c65-ff8c-4d3a-b099-45a4962e23ef'
+  module:
+    - block_content
+    - system
+  theme:
+    - tmBlog
+id: trendshero
+theme: tmBlog
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:7fe39c65-ff8c-4d3a-b099-45a4962e23ef'
+settings:
+  id: 'block_content:7fe39c65-ff8c-4d3a-b099-45a4962e23ef'
+  label: 'Trends Hero'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/trends\r\n"

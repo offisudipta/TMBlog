@@ -1,0 +1,15 @@
+uuid: f9178ba7-11e7-4e3d-af1b-5dcc7cf48d3c
+langcode: en
+status: true
+dependencies: {  }
+name: banner_271x546
+label: 'Banner 271x546'
+effects:
+  37eab72d-24ae-428b-8424-dc8c3c09580d:
+    uuid: 37eab72d-24ae-428b-8424-dc8c3c09580d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 546
+      height: 271
+      anchor: center-center

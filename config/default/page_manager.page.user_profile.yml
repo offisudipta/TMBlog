@@ -1,0 +1,12 @@
+uuid: cc8e9b6b-0092-423d-a261-87e72aa92425
+langcode: en
+status: true
+dependencies: {  }
+id: user_profile
+label: 'User Profile'
+description: ''
+use_admin_theme: false
+path: '/user/{user}'
+access_logic: and
+access_conditions: {  }
+parameters: {  }

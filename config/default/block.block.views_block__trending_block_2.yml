@@ -1,0 +1,24 @@
+uuid: 0827cf57-720a-42e6-8f21-4cd0465194fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.trending
+  module:
+    - views
+  theme:
+    - tmBlog
+id: views_block__trending_block_2
+theme: tmBlog
+region: search
+weight: 0
+provider: null
+plugin: 'views_block:trending-block_2'
+settings:
+  id: 'views_block:trending-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

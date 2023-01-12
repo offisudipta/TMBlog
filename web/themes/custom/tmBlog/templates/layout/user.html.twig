@@ -20,14 +20,14 @@
 {% set twitter = content.field_twitter_username|render|striptags|trim %}
 {% set linkedin = content.field_linkedin_username|render|striptags|trim %}
 <article{{attributes.addClass('profile','w-100')}}>
-	<section class="bg-blue innerbanner innertopheader headertinybtm author-bnr">
+	<section class="bg-tm-blue innerbanner innertopheader headertinybtm author-bnr">
 		<div class="container">
 			<div class="row textcover pb-0">
 				<div class="col-12 col-sm-6 my-md-4 py-md-1">
-					<h1 class="text-orangeff6 user-name">{{content.field_first_name|render|striptags|trim}}
+					<h1 class="text-white font-headline">{{content.field_first_name|render|striptags|trim}}
 						{{content.field_last_name|render|striptags|trim}}</h1>
 					<blockquote class="authorquote">
-						<h5 class="authorquote--quote text-white">{{content.field_description}}</h5>
+						<h5 class="authorquote--quote text-white">{{content.field_description[0]['#text']|striptags|trim|raw}}</h5>
 					</blockquote>
 					<div class="gapspacing-top-xsmall">
 						<p class="font14 text-white">
@@ -42,43 +42,45 @@
 						</p>
 					</div>
 				</div>
-				<div class="col-12 col-sm-6 d-md-flex mt-auto">
+				<div class="col-12 col-sm-6 d-md-flex mt-auto" style="z-index: 5;">
 					<img src="{{file_url(user.user_picture.0.entity.uri.value)}}" alt="Author Banner" class="w-100 mt-4 mt-md-2 pr-2rem">
-					<div class="author-transform-txt">
-						<h4 class="designation">{{content.field_designation}}</h4>
+					<div class="author-transform-txt text-right text-white">
+						<h4 class="designation">{{content.field_designation[0]['#context']['value']|striptags|trim|raw}}</h4>
 					</div>
 				</div>
 			</div>
 		</div>
+		<img src="/themes/custom/tmBlog/img/element/element-author.svg" class="d-none d-md-block h-100 element" alt="chevron">
+		<img src="/themes/custom/tmBlog/img/element/element-author-mobile.svg" class="d-md-none element-mobile" alt="chevron">
 	</section>
-	<section class="bg-orangeff6">
+	<section class="bg-tm-darkblue">
 		{% if (content.field_facebook_username['#items'] is empty) and (content.field_twitter_username['#items'] is empty) and (content.field_linkedin_username['#items'] is empty) %}
 			{% else %}
 				<div class="know-more-author">
 					<div class="container">
 						<div class="row">
-							<div class="col text-white font14 d-flex align-middle">
-								<div class="d-flex align-items-center">
+							<div class="col text-white font14 d-table align-middle">
+								<div class="d-table-cell align-middle">
 									<span class="pr-10px">
-										<strong class="d-flex">Know more
-											<span class="d-none d-md-flex px-1">about
-												{{content.field_first_name}}
-												{{content.field_last_name}}</span>
+										<strong>Know more
+											<span class="d-none d-md-inline">about
+												{{content.field_first_name[0]['#context']['value']|striptags|trim|raw}}
+												{{content.field_last_name[0]['#context']['value']|striptags|trim|raw}}</span>
 										</strong>
 									</span>
 									{% if content.field_facebook_username['#items'] is not empty %}
 										<a href="https://www.facebook.com/{{facebook}}" target="_blank">
-											<img src="/themes/custom/tmBlog/img/icon/icon-facebook.svg" alt="{{content.field_first_name|render|striptags|trim}} {{content.field_last_name|render|striptags|trim}}'s Facebook" class="pl-md-13px">
+											<img src="/themes/custom/tmBlog/img/icon/icon-facebook.svg" alt="{{content.field_first_name|render|striptags|trim}} {{content.field_last_name|render|striptags|trim}}'s Facebook" class="pl-md-13px user-social-link">
 										</a>
 									{% endif %}
 									{% if content.field_twitter_username['#items'] is not empty %}
 										<a href="https://www.twitter.com/{{twitter}}" target="_blank">
-											<img src="/themes/custom/tmBlog/img/icon/icon-twitter.svg" alt="{{content.field_first_name|render|striptags|trim}} {{content.field_last_name|render|striptags|trim}}'s Twitter" class="pl-13px">
+											<img src="/themes/custom/tmBlog/img/icon/icon-twitter.svg" alt="{{content.field_first_name|render|striptags|trim}} {{content.field_last_name|render|striptags|trim}}'s Twitter" class="pl-13px user-social-link">
 										</a>
 									{% endif %}
 									{% if content.field_linkedin_username['#items'] is not empty %}
 										<a href="https://www.linkedin.com/in/{{linkedin}}" target="_blank">
-											<img src="/themes/custom/tmBlog/img/icon/icon-linkedin.svg" alt="{{content.field_first_name|render|striptags|trim}} {{content.field_last_name|render|striptags|trim}}'s LinkedIn" class="pl-13px">
+											<img src="/themes/custom/tmBlog/img/icon/icon-linkedin.svg" alt="{{content.field_first_name|render|striptags|trim}} {{content.field_last_name|render|striptags|trim}}'s LinkedIn" class="pl-13px user-social-link">
 										</a>
 									{% endif %}
 								</div>

@@ -75,7 +75,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-lg-6 d-none d-lg-block">
-						{{content.field_banner}}
+						<div class="w-100 inner--posting">{{content.field_banner}}</div>
 					</div>
 					<div class="col-12 col-lg-6 pt-1 mt-2 pt-lg-5 mt-lg-1">
 						<div class="row">
@@ -84,33 +84,29 @@
 									<div class="d-table-cell">
 										<img src="{{file_url(node.Owner.field_user_icon.0.entity.uri.value)}}" alt="{{node.Owner.field_first_name.0.value}}'s Profile Picture" class="profile-image-circle">
 									</div>
-									<div class="d-table-cell pl-2 align-top">
+									<div class="d-table-cell pl-2">
 										<div class="font14">By
 											<a href="{{ path('entity.user.canonical', {'user': node.getOwnerId}) }}">{{node.Owner.field_first_name.0.value}}</a>
 										</div>
-										<div class="font12">{{node.Owner.field_designation.0.value}}</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="font28 col-lg-10 px-0 lh-1_2 mt-3 pt-lg-2">
-							<strong>{{label}}</strong>
-						</div>
-						<div class="font14 mt-3 mb-4 pb-2 mb-lg-0 pb-lg-0 date-duration">
-							{{ node.changed.value|date("d/m/Y") }}
-							•
-							{{content.field_read_duration}}
+						<div class="font28 col-lg-10 px-0 lh-1_2 mt-3 pt-lg-2 mb-4 pb-2 mb-lg-0 pb-lg-0 text-tm-blue font-headline text-uppercase">
+							{{label}}
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<img src="/themes/custom/tmBlog/img/element/element-inner-page.svg" alt="" class="top-0 right-0 position-absolute h-100 d-none d-lg-block chevron-img">
+		<img src="/themes/custom/tmBlog/img/element/element-inner-page-mobile.svg" alt="" class="bottom-0 right-0 position-absolute d-lg-none chevron-img">
 	</section>
-	<section class="bg-greyf5f inner-page-padding position-relative">
+	<section class="bg-light-tm-blue inner-page-padding position-relative">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-1 d-none d-lg-block">
-					<div id="shareblock-desk" class="desktop-share text-center">
+					<div id="shareblock-desk" class="desktop-share text-center affix-top">
 						<span class="font14">Share</span>
 						<div class="icons">
 							{{content.shariff_field}}
@@ -127,12 +123,12 @@
 				</div>
 				<div class="offset-lg-1"></div>
 				<div class="col-12 col-lg-8">
-					<a class="link-cta rounded-padding font16-14mob" id="summarise-content">
-						<span class="summarise-txt">Summarise</span>
-						<span class="extend-txt d-none">Expand</span>
-						it
-						<img src="/themes/custom/tmBlog/img/icon/icon-plus.svg" alt="Summarise it" class="summarise-txt"><img src="/themes/custom/tmBlog/img/icon/icon-minus.svg" alt="Extend it" class="extend-txt d-none"></a>
-
+					<a class="link-cta link-cta-secondary link-cta-secondary-orange link-cta-secondary-summarise-it rounded-padding font16-14mob text-navbar-orange font-headline text-uppercase d-inline-flex" id="summarise-content">
+						<span class="summarise-txt text-navbar-orange font-headline text-uppercase align-self-center mr-1">Summarise</span>
+						<span class="extend-txt d-none text-navbar-orange font-headline text-uppercase align-self-center mr-1">Expand</span>
+						<span class="font-headline">it</span>
+						<img src="/themes/custom/tmBlog/img/icon/icon-plus.svg" alt="Summarise it" class="summarise-txt">
+						<img src="/themes/custom/tmBlog/img/icon/icon-minus.svg" alt="Extend it" class="extend-txt d-none"></a>
 					<div class="mt-3 pt-1 mt-lg-4 pt-lg-0">
 						<div class="long-version">
 							{{content.body}}
@@ -147,18 +143,16 @@
 					</div>
 
 					<div class="font14-solid">
-						<a href="/media/{{content.field_attached_file|render|striptags|trim}}/download" class="text-orangef26" download>
-							<strong>Download article</strong><img src="/themes/custom/tmBlog/img/icon/icon-download-article.svg" alt="Download article" class="ml-2"></a>
+						<a href="/media/{{content.field_attached_file|render|striptags|trim}}/download" class="link-cta link-cta-primary link-cta-download text-uppercase" download>
+							<strong class="d-flex align-self-center">Download article</strong><img src="/themes/custom/tmBlog/img/icon/icon-download-article.svg" alt="Download article" class="ml-3 no-style"></a>
 					</div>
 				</div>
 				<div class="offset-lg-2"></div>
 			</div>
 		</div>
-
-		<div
-			class="accordion mob-share-btn d-lg-none" id="accordionExample">
-			<!-- <div class=""> -->
-
+		<img src="/themes/custom/tmBlog/img/element/element-inner-page-bottom.svg" alt="" class="position-absolute bottom-0 right-0 d-none d-lg-block chevron-img">
+		<img src="/themes/custom/tmBlog/img/element/element-inner-page-bottom-mobile.svg" alt="" class="position-absolute bottom-0 right-0 d-lg-none chevron-img">
+		<div class="accordion mob-share-btn d-lg-none" id="accordionExample">
 			<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
 				<div class="card-body p-0">
 					<div class="mobile-share text-center">

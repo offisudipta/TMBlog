@@ -1,0 +1,22 @@
+uuid: 0af5ab1f-b44e-40d7-babc-dfca91f9e883
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tmBlog
+_core:
+  default_config_hash: Qf2BoIzd9py5AYXZj8fJzCYDyVk1-AWXcu-AqQeDZKA
+id: tmBlog_local_tasks
+theme: tmBlog
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

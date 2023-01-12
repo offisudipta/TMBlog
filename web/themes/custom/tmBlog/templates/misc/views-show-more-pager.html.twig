@@ -16,11 +16,14 @@
 	<nav role="navigation" aria-labelledby="{{ heading_id }}">
 		<h4 id="{{ heading_id }}" class="visually-hidden">{{ 'Pagination'|t }}</h4>
 		<ul{{attributes}}>
-			<li class="pager__item">
+			<li class="pager__item font16-14mob load-more text-uppercase font-headline">
 				{% if item.href %}
-					<a href="{{ item.href }}" title="{{ 'Go to next page'|t }}" rel="next">{{ item.text }}</a>
+					<a href="{{ item.href }}" title="{{ 'Go to next page'|t }}" rel="next">{{ item.text }}
+						<i class="icon-arrow-downlg pl-1"></i>
+					</a>
 				{% else %}
-					<span data-scrollto="#top-of-cards" class="back-top">{{ item.text }}</span>
+					<span data-scrollto="#top-of-cards" class="back-top">{{ item.text }}<i class="icon-arrow-downlg pl-1"></i>
+					</span>
 				{% endif %}
 			</li>
 		</ul>

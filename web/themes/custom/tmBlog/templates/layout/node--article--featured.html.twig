@@ -76,6 +76,21 @@
 		</a>
 		<div class="card-img-overlay">
 			<div class="d-flex">
+				<div class="col mb-2">
+					<div class="row">
+						<a href="{{ path('entity.user.canonical', {'user': node.getOwnerId}) }}" class="text-default-dark">
+							<div class="col-auto p-0">
+								<img src="{{file_url(node.Owner.field_user_icon.0.entity.uri.value)}}" alt="{{node.Owner.field_first_name.0.value}}'s Profile Picture" class="profile-image-circle--trending">
+							</div>
+						</a>
+						<div class="col px-0 ml-2 d-flex align-items-center">
+							<a href="{{url}}" class="text-default-dark"></a>
+							<div class="d-table">
+								<a class="text-white font13-solid" href="{{ path('entity.user.canonical', {'user': node.getOwnerId}) }}">{{node.Owner.field_first_name.0.value}}</a>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="ml-auto mr-0">
 					<label class="mb-bg form-control p-0 bg-transparent border-0" for="yes-2">
 						<div>
@@ -90,39 +105,15 @@
 				</div>
 			</div>
 			<div class="top-unset">
-				<a href="{{url}}" class="text-default-dark"></a>
 				<div class="row">
-					<div class="col mb-2">
-						<div class="row">
-							<a href="{{ path('entity.user.canonical', {'user': node.getOwnerId}) }}" class="text-default-dark">
-								<div class="col-auto pr-0">
-									<img src="{{file_url(node.Owner.field_user_icon.0.entity.uri.value)}}" alt="{{node.Owner.field_first_name.0.value}}'s Profile Picture" class="profile-image-circle--trending">
-								</div>
-							</a>
-							<div class="col px-0 ml-2 d-flex align-items-center">
-								<a href="{{url}}" class="text-default-dark"></a>
-								<div class="d-table">
-									<a href="{{url}}" class="text-default-dark">
-										<span class="font13-solid pr-1 d-table-cell text-white">By</span>
-										<span class="font13-solid ml-2 d-table-cell">
-											<a class="text-white font13-solid" href="{{ path('entity.user.canonical', {'user': node.getOwnerId}) }}">{{node.Owner.field_first_name.0.value}}</a>
-										</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
 					<div class="col-12">
 						<a href="{{url}}" class="text-default-dark">
-							<div class="mt-2 mt-md-4 pt-1 pt-md-0 position-relative">
-								<div class="post-tagging m-0">
-									<strong>{{content.field_type_of_content}}</strong>
-								</div>
-							</div>
 							<p class="font18 pt-1 truncate-3-lines text-white">
 								<strong>{{label}}</strong>
 							</p>
-							{{content.field_card_description}}
+							<p class="font14 mt-1 truncate-2-lines text-white">
+								{{content.field_card_description[0]['#text']|striptags|trim|raw}}
+							</p>
 						</a>
 					</div>
 				</div>
@@ -134,8 +125,8 @@
 									•
 									{{content.field_read_duration}}</span>
 							</div>
-							<div class="col-auto">
-								<img src="/themes/custom/tmBlog/img/icon/icon-white-arrow.svg" alt="" class="article-cta">
+							<div class="col-auto d-flex">
+								<i class="icon-arrow-rightlg align-self-center article-cta"></i>
 							</div>
 						</div>
 					</div>

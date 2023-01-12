@@ -1,0 +1,15 @@
+uuid: 872ac7d8-fdd1-43ee-875f-bb3f54b65e70
+langcode: en
+status: true
+dependencies: {  }
+name: thumbnail_1128x641
+label: 'Thumbnail 1128x641'
+effects:
+  c8db91a7-61d6-4929-9a42-ad4d52858dc8:
+    uuid: c8db91a7-61d6-4929-9a42-ad4d52858dc8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1128
+      height: 641
+      anchor: center-center

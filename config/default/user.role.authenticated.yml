@@ -1,0 +1,62 @@
+uuid: 006cd079-61df-4a72-9bfd-1f7af6b2fe2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - comment
+    - contact
+    - filter
+    - flag
+    - fontawesome
+    - media
+    - media_entity_download
+    - search
+    - shortcut
+    - system
+    - webform
+_core:
+  default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access any webform configuration'
+  - 'access comments'
+  - 'access content'
+  - 'access fontawesome additional settings'
+  - 'access own webform configuration'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'access webform help'
+  - 'access webform overview'
+  - 'access webform submission user'
+  - 'administer webform'
+  - 'administer webform element access'
+  - 'administer webform submission'
+  - 'create webform'
+  - 'delete any webform'
+  - 'delete any webform submission'
+  - 'delete own webform'
+  - 'delete own webform submission'
+  - 'download media'
+  - 'edit any webform'
+  - 'edit any webform submission'
+  - 'edit own webform'
+  - 'edit own webform submission'
+  - 'edit webform assets'
+  - 'edit webform source'
+  - 'edit webform twig'
+  - 'edit webform variants'
+  - 'flag bookmark'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'unflag bookmark'
+  - 'use text format basic_html'
+  - 'view any webform submission'
+  - 'view media'
+  - 'view own webform submission'

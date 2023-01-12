@@ -1,0 +1,33 @@
+uuid: 8a0a4a31-b34f-4a5e-a8b8-066a71aa03b9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  shortlink: '[site:url]'
+  title: 'Official TM Blog | Connecting directly with an informed global audience'
+  canonical_url: '[site:url]'
+  description: 'The Official TM Blog - Read, Think, Share Ideas about technology and innovation for a better Malaysia'
+  og_site_name: 'Official TM Blog'
+  og_title: 'Official TM Blog'
+  og_type: website
+  og_url: '[site:url]'
+  og_description: 'The Official TM Blog - Read, Think, Share Ideas about technology and innovation for a better Malaysia'
+  og_image: 'https://blog.tm.com.my/sites/default/files/2022-06/tm-blog-seo.jpeg'
+  og_image_alt: tm-blog-seo.jpeg
+  og_image_height: '630'
+  og_image_type: image/jpeg
+  og_image_url: 'https://blog.tm.com.my/sites/default/files/2022-06/tm-blog-seo.jpeg'
+  og_image_width: '1200'
+  twitter_cards_type: summary_large_image
+  twitter_cards_image: 'https://blog.tm.com.my/sites/default/files/2022-06/tm-blog-seo.jpeg'
+  twitter_cards_image_height: '1200'
+  twitter_cards_image_width: '630'
+  schema_web_page_author: 'a:2:{s:5:"@type";s:12:"Organization";s:4:"name";s:11:"TM Malaysia";}'
+  schema_web_page_breadcrumb: 'Yes'
+  schema_web_page_description: 'The Official TM Blog - Read, Think, Share Ideas about technology and innovation for a better Malaysia'
+  schema_web_page_has_part: 'a:3:{s:5:"@type";s:14:"WebPageElement";s:4:"name";s:16:"Official TM Blog";s:3:"url";s:10:"[site:url]";}'
+  schema_web_page_type: WebPage

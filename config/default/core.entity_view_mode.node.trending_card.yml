@@ -1,0 +1,10 @@
+uuid: 1132f2cd-064c-461e-9a30-8eb5f5a69889
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.trending_card
+label: 'Trending card'
+targetEntityType: node
+cache: true

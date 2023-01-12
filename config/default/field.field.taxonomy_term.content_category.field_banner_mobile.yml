@@ -1,0 +1,29 @@
+uuid: 219d6fbd-28d4-4f3a-9c2d-ae33de10f428
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_banner_mobile
+    - media.type.image
+    - taxonomy.vocabulary.content_category
+id: taxonomy_term.content_category.field_banner_mobile
+field_name: field_banner_mobile
+entity_type: taxonomy_term
+bundle: content_category
+label: 'Banner Mobile'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

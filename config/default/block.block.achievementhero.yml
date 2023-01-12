@@ -1,0 +1,30 @@
+uuid: 855c6525-8de0-4723-af74-015032d7ceb8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a3dcc3a2-ff9c-4d97-ae88-bdc06fbd5d7a'
+  module:
+    - block_content
+    - system
+  theme:
+    - tmBlog
+id: achievementhero
+theme: tmBlog
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:a3dcc3a2-ff9c-4d97-ae88-bdc06fbd5d7a'
+settings:
+  id: 'block_content:a3dcc3a2-ff9c-4d97-ae88-bdc06fbd5d7a'
+  label: 'Achievement Hero'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /achievements

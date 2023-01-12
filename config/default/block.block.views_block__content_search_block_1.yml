@@ -1,0 +1,24 @@
+uuid: 1cbc10c7-ef12-49b1-8a9c-c03005b4a497
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.content_search
+  module:
+    - views
+  theme:
+    - tmBlog
+id: views_block__content_search_block_1
+theme: tmBlog
+region: content
+weight: 3
+provider: null
+plugin: 'views_block:content_search-block_1'
+settings:
+  id: 'views_block:content_search-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

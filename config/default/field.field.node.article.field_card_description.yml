@@ -1,0 +1,21 @@
+uuid: 71ae3d2e-0d62-43f5-b8fd-077dfa1ec6ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_description
+    - node.type.article
+  module:
+    - text
+id: node.article.field_card_description
+field_name: field_card_description
+entity_type: node
+bundle: article
+label: 'Card Description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

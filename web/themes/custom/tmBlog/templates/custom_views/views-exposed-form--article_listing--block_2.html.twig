@@ -18,9 +18,9 @@
 {% endif %}
 <section id="top-of-cards"></section>
 <div class="row">
-	<div class="col-12 font21 text-blue">
-		<strong>{{'Explore ' ~ form.author_name['#value'] ~ '\'s work'}}</strong>
-	</div>
+	<h3 class="col-12 text-blue font27 mb-3 pb-1 text-uppercase font-headline text-tm-blue">
+		{{'Explore ' ~ form.author_name['#value']|trim ~ '\'s work'}}
+	</h3>
 	<div class="col-12 exposed-form-row px-md-2 mx-md-1">
 		{{ form }}
 		</div>

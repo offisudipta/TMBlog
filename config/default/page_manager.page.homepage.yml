@@ -1,0 +1,12 @@
+uuid: fda71b69-d434-4305-a0f9-88c9fda8c135
+langcode: en
+status: true
+dependencies: {  }
+id: homepage
+label: Homepage
+description: ''
+use_admin_theme: false
+path: /homepage
+access_logic: and
+access_conditions: {  }
+parameters: {  }

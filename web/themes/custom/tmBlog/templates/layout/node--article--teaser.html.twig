@@ -70,23 +70,14 @@
 #}
 <div class="col-12 mb-4 col-md-6 col-lg-4 filter--cards filter--ideas article-tagging">
 	<article{{attributes.addClass('card')}}>
-		<div class="card">
+		<div class="card h-100">
 			<div class="card-body">
 				<div class="row">
 					<div class="col">
-						<div class="row">
-							<div class="col-auto pr-0">
-								<img src="{{file_url(node.Owner.field_user_icon.0.entity.uri.value)}}" alt="{{node.Owner.field_first_name.0.value}}'s Profile Picture" class="profile-image-circle--trending">
-							</div>
-							<div class="col pl-0 ml-2 d-flex align-items-center">
-								<div class="d-table">
-									<span class="font13-solid pr-1 d-table-cell">By</span>
-									<span class="font13-solid ml-2 d-table-cell">
-										<a href="{{ path('entity.user.canonical', {'user': node.getOwnerId}) }}">{{node.Owner.field_first_name.0.value}}</a>
-									</span>
-								</div>
-							</div>
-						</div>
+						<img src="{{file_url(node.Owner.field_user_icon.0.entity.uri.value)}}" alt="{{node.Owner.field_first_name.0.value}}'s Profile Picture" class="profile-image-circle--trending">
+						<span class="font13">By
+							<a class="text-decoration-underline" href="{{ path('entity.user.canonical', {'user': node.getOwnerId}) }}">{{node.Owner.field_first_name.0.value}}</a>
+						</span>
 					</div>
 					<div class="col-auto">
 						<label class="mb-bg form-control p-0" for="yes-2">
@@ -101,16 +92,13 @@
 						</label>
 					</div>
 				</div>
-				<p class="font18 pt-1 mh-article-card truncate-3-lines">
+				<p class="font18 pt-1 mh-article-card truncate-3-lines text-tm-blue text-tm-blue">
 					<strong>{{label}}</strong>
 				</p>
 				<div class="font14 mt-1 mh-article-descp truncate-2-lines">{{content.field_card_description}}</div>
 				<a href="{{url}}" class="text-default-dark">
 					<div class="mt-2 mt-md-4 pt-1 pt-md-0 position-relative">
 						{{content.field_card_image}}
-						<div class="post-tagging">
-							{{content.field_type_of_content}}
-						</div>
 					</div>
 				</a>
 			</div>
@@ -122,8 +110,8 @@
 								•
 								{{content.field_read_duration}}</span>
 						</div>
-						<div class="col-auto">
-							<img src="/themes/custom/tmBlog/img/icon/icon-white-arrow.svg" alt="" class="article-cta">
+						<div class="col-auto d-flex">
+							<i class="icon-arrow-rightlg align-self-center article-cta"></i>
 						</div>
 					</div>
 				</div>

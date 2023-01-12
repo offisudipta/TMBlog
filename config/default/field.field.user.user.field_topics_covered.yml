@@ -1,0 +1,30 @@
+uuid: d411ae52-606f-4560-85ac-f9b5efa0af4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_topics_covered
+    - taxonomy.vocabulary.content_category
+  module:
+    - user
+id: user.user.field_topics_covered
+field_name: field_topics_covered
+entity_type: user
+bundle: user
+label: 'Topics covered'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_category: content_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: b72185e9-65f3-4b6c-a61e-44b20623d85f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary_text
+    - node.type.article
+  module:
+    - text
+id: node.article.field_summary_text
+field_name: field_summary_text
+entity_type: node
+bundle: article
+label: 'Summary Text'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,17 @@
+uuid: c5482a40-44ec-4150-98d7-4174e28db069
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cCiWdBHgLwj5omG35lsKc4LkW4MBdmcctkVop4ol5x0
+name: thumbnail
+label: 'Thumbnail (100×100)'
+effects:
+  75f2e3d6-7f96-47ab-9b39-8a2dc3842a43:
+    uuid: 75f2e3d6-7f96-47ab-9b39-8a2dc3842a43
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      anchor: center-center

@@ -1,0 +1,21 @@
+uuid: 547347ac-a8d1-4ecf-9867-b0ac14ca28b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_form_block
+    - field.storage.block_content.field_form_entity
+id: block_content.custom_form_block.field_form_entity
+field_name: field_form_entity
+entity_type: block_content
+bundle: custom_form_block
+label: 'Form Entity'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings: {  }
+field_type: entity_reference

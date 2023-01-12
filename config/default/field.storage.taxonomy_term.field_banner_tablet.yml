@@ -1,0 +1,20 @@
+uuid: 278f2673-f5ae-49cc-828e-2f322c54d44d
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - taxonomy
+id: taxonomy_term.field_banner_tablet
+field_name: field_banner_tablet
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,15 @@
+uuid: ca2950c7-e966-49f0-8125-a2b26f5010af
+langcode: en
+status: true
+dependencies: {  }
+name: banner_600x600
+label: 'Banner 600x600'
+effects:
+  e4a2706b-7629-4a3e-adb5-c342104e549b:
+    uuid: e4a2706b-7629-4a3e-adb5-c342104e549b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 600
+      anchor: center-center

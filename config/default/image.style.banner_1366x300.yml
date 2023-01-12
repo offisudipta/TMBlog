@@ -1,0 +1,15 @@
+uuid: 80053e6d-2844-485e-b31d-7b9b271b1f3d
+langcode: en
+status: true
+dependencies: {  }
+name: banner_1366x300
+label: 'Banner 1366x300'
+effects:
+  61aba520-03ec-4e4f-91b7-03d8803237a2:
+    uuid: 61aba520-03ec-4e4f-91b7-03d8803237a2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1366
+      height: 300
+      anchor: center-center

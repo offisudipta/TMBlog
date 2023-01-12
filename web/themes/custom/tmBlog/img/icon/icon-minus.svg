@@ -1,8 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <g id="icon-minus" transform="translate(-10 -10)">
-    <circle id="Ellipse_254" data-name="Ellipse 254" cx="8" cy="8" r="8" transform="translate(10 10)" fill="#FF6600"/>
-    <g id="Group_81263" data-name="Group 81263" transform="translate(13.722 17.646)">
-      <line id="Line_516" data-name="Line 516" x1="8.622" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
-    </g>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="15.377" height="2.608" viewBox="0 0 15.377 2.608">
+  <path id="icon-minus" d="M13.658,7.8H7.907l.675.422c0-.444-1-.422-1.394-.422s-.719-.022-.719.422V7.8H.719a.809.809,0,0,0,0,1.608H6.469V8.6c0,.444.322.581.719.581s1.394.249,1.394-.2l-.675.419h5.751a.809.809,0,0,0,0-1.608Zm0,0" transform="translate(0.5 -7.297)" fill="#fb5e00" stroke="#fb5e00" stroke-width="1"/>
 </svg>

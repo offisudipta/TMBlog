@@ -1,0 +1,51 @@
+uuid: 3ff28c00-32ab-46e3-af61-4a575073500e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.content_category.field_banner_desktop
+    - field.field.taxonomy_term.content_category.field_banner_mobile
+    - field.field.taxonomy_term.content_category.field_banner_tablet
+    - taxonomy.vocabulary.content_category
+  module:
+    - text
+id: taxonomy_term.content_category.default
+targetEntityType: taxonomy_term
+bundle: content_category
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_banner_desktop:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_banner_mobile:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_banner_tablet:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

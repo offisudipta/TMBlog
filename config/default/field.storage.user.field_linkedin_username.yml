@@ -1,0 +1,21 @@
+uuid: f08e288c-91d5-42e8-bd94-6842ae340c01
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_linkedin_username
+field_name: field_linkedin_username
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

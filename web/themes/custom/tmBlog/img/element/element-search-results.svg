@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="124.877" height="249.75" viewBox="0 0 124.877 249.75">
+  <g id="Group_84596" data-name="Group 84596" transform="translate(6086.875 -5659.001)">
+    <g id="Group_84594" data-name="Group 84594" transform="translate(-6086.873 5908.751) rotate(-90)">
+      <path id="Path_59493" data-name="Path 59493" d="M0,0V62.437L62.438,0Z" fill="#fb5e00"/>
+      <path id="Path_59494" data-name="Path 59494" d="M0,124.873H62.438l62.438-62.437V0h0Z" transform="translate(0.001 0.001)" fill="#fb5e00"/>
+      <path id="Path_59495" data-name="Path 59495" d="M0,62.438H62.439V0Z" transform="translate(62.437 62.436)" fill="#1800e1"/>
+      <path id="Path_59496" data-name="Path 59496" d="M62.437,0,0,62.436v62.437L124.875,0Z" transform="translate(0)" fill="#150080"/>
+    </g>
+    <g id="Group_84595" data-name="Group 84595" transform="translate(-5961.998 5783.875) rotate(180)">
+      <path id="Path_59493-2" data-name="Path 59493" d="M0,62.437V0L62.438,62.437Z" transform="translate(0 62.437)" fill="#1800e1"/>
+      <path id="Path_59494-2" data-name="Path 59494" d="M0,0H62.438l62.438,62.437v62.436h0Z" transform="translate(0.001 0)" fill="#fb5e00"/>
+      <path id="Path_59495-2" data-name="Path 59495" d="M0,0H62.439V62.438Z" transform="translate(62.438 0)" fill="#1800e1"/>
+      <path id="Path_59496-2" data-name="Path 59496" d="M62.437,124.873,0,62.437V0L124.875,124.873Z" transform="translate(0 0.001)" fill="#150080"/>
+    </g>
+  </g>
+</svg>

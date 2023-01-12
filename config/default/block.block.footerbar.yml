@@ -1,0 +1,25 @@
+uuid: d3467bc8-ed74-4622-a572-a92e38073f51
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a170fa43-a360-4d79-9a8f-cfc8ae1d93ca'
+  module:
+    - block_content
+  theme:
+    - tmBlog
+id: footerbar
+theme: tmBlog
+region: footer
+weight: -3
+provider: null
+plugin: 'block_content:a170fa43-a360-4d79-9a8f-cfc8ae1d93ca'
+settings:
+  id: 'block_content:a170fa43-a360-4d79-9a8f-cfc8ae1d93ca'
+  label: 'Footer Bar'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

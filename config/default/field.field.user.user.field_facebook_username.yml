@@ -1,0 +1,20 @@
+uuid: ba471508-4488-46c8-a582-d0041f6570cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_facebook_username
+  module:
+    - user
+id: user.user.field_facebook_username
+field_name: field_facebook_username
+entity_type: user
+bundle: user
+label: 'Facebook username'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

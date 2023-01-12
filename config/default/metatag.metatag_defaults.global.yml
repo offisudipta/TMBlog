@@ -1,0 +1,14 @@
+uuid: 4c08bf45-3c45-4fee-896f-1167932e58df
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  title: '[current-page:title] | [site:name]'
+  canonical_url: '[current-page:url]'
+  schema_web_page_breadcrumb: 'Yes'
+  schema_web_page_has_part: 'a:3:{s:5:"@type";s:14:"WebPageElement";s:4:"name";s:58:"Official TM Blog - Explore Latest Happenings - TM Malaysia";s:3:"url";s:10:"[site:url]";}'
+  schema_web_page_type: WebPage

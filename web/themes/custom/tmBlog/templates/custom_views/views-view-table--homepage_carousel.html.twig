@@ -34,11 +34,12 @@
 	<img src="/themes/custom/tmBlog/logo.svg" class="position-absolute d-lg-none banner-logo-mobile"/>
 	<div class="container-lg mx-auto">
 		<div class="mainbanner__bannertitle">
-			<h2 class="text-white mainbanner__txttile position-relative">
+			<h2
+				class="text-white mainbanner__txttile position-relative text-uppercase font-headline">
 				{# <span>Keep up with the</span> #}
 				Explore
 				<div class="dropdown mainbnrslider-nav-cover">
-					<button class="dropbtn mainbnrslider-nav p-0">
+					<button class="dropbtn mainbnrslider-nav p-0 text-uppercase font-headline">
 						{% for row in rows %}
 							<div data-index="{{loop.index}}">{{row.columns.name|render|striptags|trim|lower}}</div>
 						{% endfor %}
@@ -51,7 +52,8 @@
 				</div>
 			</h2>
 			<div class="row">
-				<div class="col-12">
+				<div
+					class="col-12">
 					{# <div class="mainbnrslider-for container my-3 px-0">
 						{% for row in rows %}
 							<div>
@@ -62,8 +64,10 @@
 					<div class="mainbnrslider-for mainbnrslider-fade my-4">
 						{% for row in rows %}
 							<div>
-								<a href="/{{row.columns.name_1.content|render|striptags|trim|lower}}" class="link-cta-secondary">Know more
-									<img src="/themes/custom/tmBlog/img/icon/icon-orange-arrow.svg" alt="Know more"></a>
+								<a href="/{{row.columns.name_1.content|render|striptags|trim|lower}}" class="link-cta link-cta-primary">
+									<span class="text">Know more</span>
+									<i class="icon-arrow-rightlg"></i>
+								</a>
 							</div>
 						{% endfor %}
 					</div>

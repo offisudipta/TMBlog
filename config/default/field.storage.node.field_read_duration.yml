@@ -1,0 +1,20 @@
+uuid: 16db004d-fca4-446e-aad4-3c06ea63b212
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_read_duration
+field_name: field_read_duration
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
