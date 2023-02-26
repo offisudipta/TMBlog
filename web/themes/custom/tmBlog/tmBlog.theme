@@ -26,6 +26,7 @@ function tmBlog_form_alter(&$form, FormStateInterface $form_state, $form_id) {
     $form['custom_daterange'] = [
       '#type' => 'textfield',
       '#title' => 'Date',
+      '#title_display' => 'after',
       '#attributes' => [
         'class' => [
           'custom_daterange',

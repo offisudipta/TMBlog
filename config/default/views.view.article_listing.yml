@@ -678,7 +678,7 @@ display:
         filters: false
         filter_groups: false
         header: false
-      css_class: 'bg-tm-blue author-padding'
+      css_class: 'bg-light-tm-blue author-padding'
       header:
         result:
           id: result
@@ -689,7 +689,7 @@ display:
           admin_label: ''
           plugin_id: result
           empty: true
-          content: '<div class="font14 text-white">Showing @current_record_count of @total results</div>'
+          content: '<div class="font14 text-default-dark">Showing @current_record_count of @total results</div> <a href="#" class="clear-filter font14">Clear filter</a>'
       display_extenders:
         simple_sitemap_display_extender: {  }
         metatag_display_extender:

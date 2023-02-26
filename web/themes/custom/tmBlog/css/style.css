@@ -255,7 +255,8 @@ label[for^="edit-custom-daterange"] {
     left: 25px;
 }
 
-.onetwo select.selected~label {
+.onetwo select.selected~label,
+.custom_daterange~label.selected {
     top: 5px;
     font-size: 14px;
     -webkit-transform: translateY(0);
@@ -317,9 +318,8 @@ input.custom_daterange.form-text {
     padding-top: 19px;
     font-size: 16px;
     cursor: pointer;
-    padding-left: 0px;
-    padding-right: 0px;
     margin-top: 0px;
+    padding: 19.5px 25px 0px 25px;
 }
 
 .form-item-custom-daterange {
@@ -1195,6 +1195,14 @@ body.page-node-type-article .nav-border-bottom {
     display: none;
 }
 
+.author-padding {
+    position: relative;
+}
+
+.pager-show-more {
+    padding-bottom: unset;
+}
+
 @media all and (min-width: 992px) {
     .simple-popup-blocks-global .icon-search {
         width: 18px;
@@ -1202,6 +1210,7 @@ body.page-node-type-article .nav-border-bottom {
         position: relative;
         margin-top: -2px;
     }
+
     .simple-popup-blocks-global .icon-close {
         width: 18px;
     }
@@ -1214,26 +1223,32 @@ body.page-node-type-article .nav-border-bottom {
     .exposed-form-row details {
         flex: 100%;
     }
+
     .exposed-form-row>.form-item {
         margin-top: 0.5rem;
         margin-bottom: 0px;
     }
+
     .view.view-content-search .view-filters {
         order: 1;
         padding-left: 12px;
         padding-right: 12px;
     }
+
     .view.view-content-search .view-footer {
         order: -1;
     }
+
     .view.view-content-search .view-filters+.font21 {
         padding-left: 12px !important;
         padding-right: 12px !important;
     }
+
     .view.view-content-search {
         display: flex;
         flex-direction: column;
     }
+
     .spb_bottom_bar .spb-controls {
         top: 15px;
         right: 12px;
@@ -1242,13 +1257,16 @@ body.page-node-type-article .nav-border-bottom {
         display: block;
         width: auto;
     }
+
     .exposed-form-row>* {
         width: 100%;
     }
+
     .block-newsletter-modal .spb-popup-main-wrapper.spb_bottom_bar {
         max-width: 500px;
         margin: auto;
     }
+
     .flag.flag-bookmark a {
         height: 20px;
         width: 16px;
@@ -1266,39 +1284,49 @@ body.page-node-type-article .nav-border-bottom {
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
+
     .spb_top_bar .spb-controls {
         top: 30px;
         left: 77%;
     }
+
     .view.view-content-search>.view-content {
         width: 62%;
     }
+
     .block-views-blocktrending-block-2 {
         width: 60%;
     }
+
     .spb_center {
         top: 22%;
     }
+
     main {
         margin-top: 58px;
     }
+
     .spb_top_bar .spb-controls {
         bottom: unset;
         display: unset;
         justify-content: unset;
         width: auto;
     }
+
     div#spb-block-feedback .spb-popup-main-wrapper {
         top: 5%;
     }
+
     .exposed-form-row>.form-item {
         margin-right: 12px;
     }
+
     div.simple-popup-blocks-global form {
         max-height: calc(100vh - 4rem) !important;
         display: block;
         overflow-y: auto;
     }
+
     .simple-popup-blocks-global .spb_center .spb-controls {
         width: unset;
         display: block;
@@ -1309,12 +1337,15 @@ body.page-node-type-article .nav-border-bottom {
         left: unset;
         top: 1.25rem;
     }
+
     .newsletter1::before {
         content: url("/themes/custom/tmBlog/img/icon/element-footer-desktop.svg");
     }
+
     .simple-popup-blocks-global legend span {
         font-size: calc(1.125rem * var(--text-multiplier, 0.83));
     }
+
     .onetwo label {
         top: 48%;
     }

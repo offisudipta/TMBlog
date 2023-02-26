@@ -1,6 +1,6 @@
-(function($) {
+(function ($) {
     Drupal.behaviors.exampleModule = {
-        attach: function(context, settings) {
+        attach: function (context, settings) {
             $('input.custom_daterange').daterangepicker({
                 autoUpdateInput: false,
                 "drops": "auto",
@@ -9,36 +9,42 @@
                     format: 'DD/MM/YYYY'
                 }
             });
+            $('input.custom_daterange', context).each(function () {
+                if ($(this).val()) {
+                    $(this).closest('div').find('label').addClass('selected');
+                }
+            });
 
-            $('input.custom_daterange').on('apply.daterangepicker', function(ev, picker) {
+            $('input.custom_daterange').on('apply.daterangepicker', function (ev, picker) {
                 $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
                 $('.exposed-form-row input[name="changed[min]"]').val(picker.startDate.format('MM/DD/YYYY'));
                 $('.exposed-form-row input[name="changed[max]"]').val(picker.endDate.add('1', 'day').format('MM/DD/YYYY'));
+                $(this).closest('div').find('label').addClass('selected');
                 $('.exposed-form-row .form-actions input.form-submit').trigger('click');
 
             });
 
-            $('input.custom_daterange').on('cancel.daterangepicker', function(ev, picker) {
+            $('input.custom_daterange').on('cancel.daterangepicker', function (ev, picker) {
                 $(this).val('');
                 $('.exposed-form-row input[name="changed[min]"]').val('');
                 $('.exposed-form-row input[name="changed[max]"]').val('');
                 $('.exposed-form-row .form-actions input.form-submit').trigger('click');
             });
-            $('.exposed-form-row details.form-item summary').on('click', function() {
+            $('.exposed-form-row details.form-item summary').on('click', function () {
                 $(this).closest('.exposed-form-row').find('summary').attr('open', 'false');
                 $(this).attr('open', 'true')
             });
-            $("details").on("click", function(e) {
+            $("details").on("click", function (e) {
                 $("details[open]").not(this).removeAttr("open");
                 e.stopPropagation();
             });
-            $(document).on("click", function() {
+            $(document).on("click", function () {
                 $("details[open]").removeAttr("open");
             });
-            $(document).ready(function() {
+            $(document).ready(function () {
                 $("details[open]").removeAttr("open");
             });
-            $('.view-header a.clear-filter').on('click', function(e) {
+            $('.view-header a.clear-filter').on('click', function (e) {
                 e.preventDefault()
                 $(this).closest('.view').find('form.views-exposed-form input,form.views-exposed-form select').not(':button, :submit, :reset')
                     .val('')
@@ -57,15 +63,15 @@
                     }
                 });
             }
-            $('#myDropdown .selection').on('click', function() {
+            $('#myDropdown .selection').on('click', function () {
                 let index = $(this).data('index');
                 $('.mainbnrslider-nav').slick('slickGoTo', index - 1);
                 $('.mainbnrslider-nav').slick('slickPause');
             });
-            $('.flag.flag-bookmark.action-unflag a').on('click', function() {
+            $('.flag.flag-bookmark.action-unflag a').on('click', function () {
                 $(this).closest('.view-flag-bookmark').find('.exposed-form-row .form-actions .form-submit').trigger('click');
             });
-            $('.flag.flag-bookmark a').on("click", function() {
+            $('.flag.flag-bookmark a').on("click", function () {
                 let _this = $(this).closest(".mb");
                 let checked_options = {
                     // 'container': 'body',
@@ -80,14 +86,14 @@
                     'trigger': 'manual',
                 };
                 if ($(this).closest('.flag-bookmark').hasClass('action-flag')) {
-                    setTimeout(function() {
+                    setTimeout(function () {
                         _this.popover('dispose');
                     }, 2000);
                     _this.popover('dispose');
                     _this.popover(checked_options);
                     _this.popover('show');
                 } else {
-                    setTimeout(function() {
+                    setTimeout(function () {
                         _this.popover('dispose');
                     }, 2000);
                     _this.popover('dispose');
@@ -101,7 +107,7 @@
             if (select_title != "") {
                 select.prop('title', select_title);
             }
-            $(".back-top").click(function() {
+            $(".back-top").click(function () {
                 let _this = $(this);
                 $('html, body').scrollTop($(_this.data('scrollto')).offset().top);
             });
@@ -111,7 +117,7 @@
                 // targetLabel.addClass('selected');
 
                 var value = elm.currentTarget.value;
-                if (value === '') {} else {
+                if (value === '') { } else {
                     targetLabel.addClass('selected');
                 }
             }).on('select2:close', (elm) => {
@@ -125,7 +131,7 @@
                     targetLabel.removeAttr('class');
                 }
             });
-            $('select[data-drupal-selector="edit-field-category-target-id-1"],select[data-drupal-selector="edit-field-category-target-id"]', context).each(function(e) {
+            $('select[data-drupal-selector="edit-field-category-target-id-1"],select[data-drupal-selector="edit-field-category-target-id"]', context).each(function (e) {
                 console.log($(this).val().length);
                 if ($(this).val().length) {
                     $(this).addClass('selected');
@@ -134,7 +140,7 @@
                 }
             });
 
-            $('select[data-drupal-selector="edit-field-category-target-id-1"],select[data-drupal-selector="edit-field-category-target-id"]', context).on('select2:opening select2:closing', function(event) {
+            $('select[data-drupal-selector="edit-field-category-target-id-1"],select[data-drupal-selector="edit-field-category-target-id"]', context).on('select2:opening select2:closing', function (event) {
                 var $searchfield = $(this).parent().find('.select2-search__field');
                 $searchfield.prop('disabled', true);
             });

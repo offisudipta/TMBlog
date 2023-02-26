@@ -15,12 +15,24 @@ category: ''
 elements: |-
   markup:
     '#type': webform_markup
+    '#wrapper_attributes':
+      class:
+        - modal-title
+        - font24
+        - font-headline
+        - text-uppercase
+        - text-left
     '#markup': '<div class="form-title">Let us know your thoughts!</div>'
   did_you_find_what_you_were_looking_for_:
     '#type': radios
     '#title': 'Did you find what you were looking for?'
+    '#title_display': before
     '#options': yes_no
+    '#options_display': side_by_side
     '#required': true
+    '#wrapper_attributes':
+      class:
+        - webform-options-display-side-by-side
   how_can_we_improve_:
     '#type': checkboxes
     '#title': 'How can we improve?'
@@ -36,10 +48,15 @@ elements: |-
     '#title': 'Any final thoughts?'
     '#placeholder': 'In 100 words or less, tell us what you think.'
     '#required': true
+    '#label_attributes':
+      class:
+        - text-tm-blue
+        - font18-16mob
   container:
     '#type': container
     '#attributes':
-      style: 'display:flex;justify-content: space-between;align-items: center;padding-top:12px;padding-bottom:18px;border: none;'
+      class:
+        - custom-actions-wrapper
     actions:
       '#type': webform_actions
       '#title': 'Submit button(s)'
